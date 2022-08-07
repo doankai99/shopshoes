@@ -13,7 +13,6 @@ $total = $result->num_rows;
 <body>
 <center>
 <table class="tbl" border="1">
-    <!-- tạo các cột tiêu đề của bảng -->
     <tr>    
         <th> Username </th>
         <th> Options </th>
@@ -22,9 +21,8 @@ $total = $result->num_rows;
     //hiển thị dữ liệu từ database vào bảng
     while($row = mysqli_fetch_array($result)) {     
         echo "<tr>";
-            echo '<td>' . $row["username"] . '</td>'; //in cột Username (1)
+            echo '<td>' . $row["username"] . '</td>'; 
         ?>  
-        <!-- tạo cột Options để chứa 2 nút Update & Delete -->  
         <td>
             <form class="frm_inline" action="update_pass.php" method="POST">
                 <input type="hidden" name="id" value='<?= $row["user_id"] ?>'>

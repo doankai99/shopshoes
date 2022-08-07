@@ -1,23 +1,15 @@
 <?php
-//Thông tin kết nối đến database
 $hostname = 'localhost';
 $dbport = 3306;
 $dbname = 'shoes';
 $username = 'root';
-/*Username DB mặc định của cả XAMPP & MAMP đều
- * là 'root' */
 $password = '';
-/*Lưu ý:
- *- Với XAMPP: Pass DB mặc định là '' (rỗng)
- *- Với MAMP: Pass DB mặc định là 'root'  */
-
 //Thiết lập kết nối đến DB
 $connection = new mysqli($hostname, $username, $password, 
 	$dbname, $dbport);
 if ($connection->connect_error) {
 	die($connection->connect_error); //hiển thị lỗi kết nối
 } 
-
 //Tạo hàm để chạy câu lệnh SQL
 function querySQL ($qry) {
 	global $connection; //set "$connection" thành biến toàn cục (global)
@@ -27,7 +19,6 @@ function querySQL ($qry) {
 	}
 	return $result;
 }
-
 //khởi tạo 2 biến string chứa ký tự đặc biệt dùng để mã hóa  
 $key1 = "$*%(@#";
 $key2 = "()#*$!";
@@ -41,5 +32,4 @@ function encryptPassword ($password) {
 	$token = hash("ripemd128","$key1$password$key2");
 	return $token;
 }
-
 ?>

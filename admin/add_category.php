@@ -4,9 +4,6 @@ $host="localhost";
 $user="root";
 $password="";
 $db="shoes";
-//kiểm tra người dùng đã bấm nút Add chưa
-//nếu đã bấm rồi thực thi câu lệnh SQL
-//ngược lại skip code PHP và hiển thị form
 if (isset($_POST['add'])) {
 $name = $_POST['name'];
 $sql = "INSERT INTO category (category_name) VALUES ('$name')";

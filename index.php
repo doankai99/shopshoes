@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="css/home.css?version=3" title="style" />
+    <link rel="stylesheet" type="text/css" href="css/home.css?version3" title="style" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <body>
         <div class="Container">
             <div class="header">
@@ -93,22 +95,23 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="background-image: linear-gradient(to right,#f2f6f6, #f4e6a6); width : 1490px">
-            <div class="col-md-6">
+        <div id = "info">
+            <div class="info1">
             <h4><strong>Your Store</strong></h4>
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100052587250831"><box-icon type='logo' name='facebook-square'></box-icon></a></li>
+                    <li><a href="#"><box-icon name='instagram-alt' type='logo' ></box-icon></a></li>
+                    <li><a href="#"><box-icon name='envelope' type='solid' ></box-icon></a></li>
+                    <li><a href="#"><box-icon name='yahoo' type='logo' ></box-icon></a></li>
                 </ul> 
             </div>
-            <div class="col-md-6">
+            <div class="info2">
             <h4>OUR ADDRESS</h4>
-                <p>To 10. Phuong Dong Mai Quan Ha Dong tp Ha Noi</p>
+                <p>To 10. Phuong Dong Mai Quan Ha Dong tp Ha Noi</p><br>
+            </div>
             </div>
         </div>
-        <div class="footer" align = "center">
+        <div class="footer">
             <p>If you have questions regarding your Data, please visit our Privacy Policy </p><br>
             <p>Want to change how you receive these emails? You can update your preferences or unsubscribe from <br> this list.© 2022 Your Brand. All Rights Reserved.</p>
         </div>
