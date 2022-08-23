@@ -5,7 +5,7 @@ if (isset($_POST['add'])) {
     $price = $_POST['price'];
     $category = $_POST['category'];
     $image = "";
-    $type = $_POST['type'];
+    // $type = $_POST['type'];
 //đoạn code dùng để upload & xử lý ảnh
 //kiểm tra người dùng đã chọn file ảnh có dung lượng khác 0
 if (isset($_FILES['image']) && $_FILES['image']['size'] != 0) {	
@@ -27,8 +27,8 @@ if (isset($_FILES['image']) && $_FILES['image']['size'] != 0) {
     //di chuyển file ảnh từ đường dẫn tạm thời đến địa chỉ đã thiết lập
     move_uploaded_file($temp_name, $destination);
 }
-$sql = "INSERT INTO product (product_name, price, procduct_type, product_image,type)
-        VALUES ('$name', '$price', '$category', '$image', '$type')";
+$sql = "INSERT INTO product (product_name, price, procduct_type, product_image)
+        VALUES ('$name', '$price', '$category', '$image')";
 $run = querySQL($sql);
 if ($run) { ?>
    <script>
@@ -49,7 +49,6 @@ if ($run) { ?>
 <body>
 <center>
 <form class="frm" action="" method="POST" enctype="multipart/form-data" class="frm1234">
-<!-- Lưu ý: bổ sung thuộc tính enctype vào form khi upload file -->
     
     <legend><strong>Add Product</strong></legend>
     <strong>Name</strong> : <input type="text" name="name" required maxlength="50"> <br> <br>
@@ -66,7 +65,7 @@ if ($run) { ?>
     </select> 
     <br> <br>
     <strong>Image</strong>: <input type="file" name="image" required> <br> <br>
-    <strong>Type Product</strong>: <input type="text" name="type" required maxlength="30"><br>
+    <!-- <strong>Type Product</strong>: <input type="text" name="type" required maxlength="30"><br> -->
     <input type="submit" value="Add" name="add">
 </form>
 </center>
